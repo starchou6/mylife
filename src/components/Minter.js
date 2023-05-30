@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import React from 'react'
-import { connectWallet, getCurrentWalletConnected } from "./utils/interact.js";
+import { connectWallet, getCurrentWalletConnected } from "../utils/interact.js";
 import ImageUploader from "react-images-upload";
 
 const Minter = (props) => {
