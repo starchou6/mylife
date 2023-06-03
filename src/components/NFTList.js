@@ -15,7 +15,7 @@ const NFTList = ({ data }) => (
                 <List.Item>
                     <Card
                         hoverable
-                        style={{ width: 360 }}
+                        style={{ width: '100%', maxWidth: 360 }}
                         cover={<img alt="example" src="/images/img1.jpg" style={{ height: 240 }} />}
                     >
                         <Meta title={item.title} description={item.description} />

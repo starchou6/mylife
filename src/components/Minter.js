@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import React from 'react'
-import { connectWallet, getCurrentWalletConnected } from "../utils/interact.js";
+import { connectWallet, getCurrentWalletConnected } from "../utils/Interact.js";
 import ImageUploader from "react-images-upload";
+import { getBalance } from "../utils/Eth.js";
 
 const Minter = (props) => {
 
@@ -41,6 +42,7 @@ const Minter = (props) => {
   const onMintPressed = async () => { //TODO: implement
     // const { status } = await mintNFT(url, name, description);
     // setStatus(status);
+    getBalance(name);
   };
 
   function addWalletListener() {
