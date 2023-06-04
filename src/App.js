@@ -2,7 +2,7 @@ import { AppstoreOutlined, PlusSquareOutlined } from '@ant-design/icons';
 import { Menu } from 'antd';
 import { useState } from 'react';
 import Minter from './components/Minter.js';
-import NFTList from './components/NFTList.js';
+import { AllNFTList, MyNFTList } from './components/NFTList.js';
 
 const allNFTData = [
   {
@@ -77,8 +77,8 @@ const App = () => {
     <div>
       <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={items} />
       {current == 'minter' && <Minter />}
-      {current == 'my' && <NFTList data = { NFTData }/>}
-      {current == 'all' && <NFTList data = { NFTData }/>}
+      {current == 'my' && <MyNFTList data = { NFTData }/>}
+      {current == 'all' && <AllNFTList data = { NFTData }/>}
     </div>
   );
 };
